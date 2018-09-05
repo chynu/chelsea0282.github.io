@@ -1,9 +1,9 @@
 Title: Coloring Board
 Image: posts/images/coloring_board.jpg
 Link: https://youtu.be/rwbFn73PE2Q
+Short: This is a short description about Coloring Board
 
-For ECE 3140 final project, we used FRDM microcontroller and TFT Display to create an 
-accelerometer based coloring board. We laser cut acrylic to build housing so that it is 
-easy to hold for users and also attached the batteries so that the uses can use the 
+For ECE 3140 final project, we used FRDM microcontroller and TFT Display to create an
+accelerometer based coloring board. We laser cut acrylic to build housing so that it is
+easy to hold for users and also attached the batteries so that the uses can use the
 coloring board witout having external connections.
-

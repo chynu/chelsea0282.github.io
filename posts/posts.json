@@ -1,7 +1,17 @@
 [
   {
-    "file": "example_post.txt",
+    "file": "bank_of_america.txt",
     "date": "2018-08-23",
-    "labels": "example"
+    "labels": "work"
+  },
+  {
+    "file": "coloring_board.txt",
+    "date": "2018-08-23",
+    "labels": "ece"
+  },
+  {
+    "file": "case_study_fb.txt",
+    "date": "2018-08-23",
+    "labels": "case-study"
   }
 ]

@@ -1,0 +1,7 @@
+Title: Bank of America, Cybersecurity
+Image: posts/images/boa.jpg
+Link:
+Short: This is a short description about Bank of America
+
+Developer intern of the Global Information Security division within Bank of America. Placed first
+in the intern-wide presentation competition.
