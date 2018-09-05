@@ -1,0 +1,5 @@
+Title: Example Title
+Image: posts/images/example_image.jpg
+Link: https://github.com
+
+This is an example post. You can use HTML here <br /><br /> if you <b>want</b>.

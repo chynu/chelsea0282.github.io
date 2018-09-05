@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Chelsea Han</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script type="text/javascript">
+window.addEventListener("load", function() {
+  if (location.search === "?debug") {
+    Array.from(document.querySelectorAll("div"))
+        .forEach(e => e.style.outline = "1px dashed red");
+  }
+});
+    </script>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="logo">
+        <img src="logo.png" />
+      </div>
+      <div class="menu">
+        <a href="#top">Top</a>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+    <div class="title content">
+      <a name="top"></a>
+      <img class="headshot" src="headshot.jpg" />
+    </div>
+
+    <div class="about content">
+      <a name="about"></a>
+      Hi, my name is Chelsea Han. I'm currently an engineering student at Cornell University studying ECE.
+    </div>
+
+    <div class="blog content">
+      <a name="blog"></a>
+      <div class="post">
+        <div class="post-image">
+          <img src="Lemon.png" />
+        </div>
+        <div class="post-title">
+          Post Title
+        </div>
+        <div class="post-desc">
+          Blah Blah Blah
+        </div>
+      </div>
+    </div>
+
+    <div class="contact content">
+        <a name="contact"></a>
+      Contact me by email at <a href="mailto:sh792@cornell.edu">sh792@cornell.edu</a>.
+    </div>
+
+    <div class="bottombar">
+
+    </div>
+  </body>
+</html>
