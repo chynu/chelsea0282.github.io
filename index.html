@@ -1,63 +1,93 @@
 <html>
   <head>
     <title>Chelsea Han</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+    <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript">
-window.addEventListener("load", function() {
-  if (location.search === "?debug") {
-    Array.from(document.querySelectorAll("div"))
-        .forEach(e => e.style.outline = "1px dashed red");
-  }
-});
+      function showPage(page) {
+        if (page === "" || page === "#") {
+          document.querySelector(".about").hidden = false;
+          document.querySelector(".blog").hidden = true;
+        }
+        else {
+          document.querySelector(".about").hidden = true;
+          document.querySelector(".blog").hidden = false;
+        }
+      }
+
+      function showMenu() {
+        var nav = document.querySelector(".nav");
+        if (nav.classList.contains("shown")) {
+          nav.classList.remove("shown");
+        }
+        else {
+          nav.classList.add("shown");
+        }
+      }
+
+      window.addEventListener("load", function() {
+        showPage(location.hash);
+        loadPosts();
+      });
     </script>
   </head>
   <body>
     <div class="topbar">
+      <div class="menu">
+        <a onclick="javascript: showMenu();">
+          <img src="hamburger_icon.svg" />
+        </a>
+      </div>
       <div class="logo">
-        <img src="logo.png" />
+        <a href="/#" onclick="javascript: showPage('#');">
+          <img src="logo.png" />
+        </a>
       </div>
       <div class="menu">
-        <a href="#top">Top</a>
-        <a href="#about">About</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
       </div>
+    </div>
+
+    <div class="nav">
+      <div class="entry">
+        <a href="/#" onclick="javascript: showPage('#'); showMenu();">
+          About
+        </a>
+      </div>
+      <div class="entry">
+        <a href="/#blog" onclick="javascript: showPage('#blog'); showMenu();">
+          Projects
+        </a>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="about">
+        <div>
+          Welcome to Chelsea's website!
+          <br /><br />
+          Chelsea is currently a junior attending Cornell University studying Information Science, Electrical Computer Engineering, and Computer Science and Cornell University. She is passionate about innovative technologies and their positive impacts on society. She wants to make an impact through product management.
+          <br /><br />
+          In her free time, Chelsea actively pursues the alter ego of craft and art-enthusiast.
+          <br /><br />
+          Feel free to reach out to Chelsea:<br />
+          Email: <a href="mailto:sh792@cornell.edu">sh792@cornell.edu</a><br />
+        </div>
+        <img src="profile2_crop.jpg" />
+      </div>
+
       <div class="clear"></div>
-    </div>
 
-    <div class="title content">
-      <a name="top"></a>
-      <img class="headshot" src="headshot.jpg" />
-    </div>
-
-    <div class="about content">
-      <a name="about"></a>
-      Hi, my name is Chelsea Han. I'm currently an engineering student at Cornell University studying ECE.
-    </div>
-
-    <div class="blog content">
-      <a name="blog"></a>
-      <div class="post">
-        <div class="post-image">
-          <img src="Lemon.png" />
+      <div class="blog">
+        <div>
+          Hello, my name is Chelsea and I'm an aspiring Product Manager.
+          <br />
+          Check out my recent projects and passion!
         </div>
-        <div class="post-title">
-          Post Title
-        </div>
-        <div class="post-desc">
-          Blah Blah Blah
-        </div>
+        <div class="spacer"></div>
+        <div class="error">Error retrieving posts. Please try again later.</div>
       </div>
-    </div>
-
-    <div class="contact content">
-        <a name="contact"></a>
-      Contact me by email at <a href="mailto:sh792@cornell.edu">sh792@cornell.edu</a>.
-    </div>
-
-    <div class="bottombar">
-
     </div>
   </body>
 </html>
